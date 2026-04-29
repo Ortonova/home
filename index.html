@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortonova Digital</title>
+    <style>
+        /* --- SECCIÓN DE COLORES (Editalos aquí) --- */
+        :root {
+            --color-fondo-general: #000000;
+            --color-seccion-logo: #000000;
+            --color-seccion-carrusel1: #fcfcfc;
+            --color-seccion-redes: #19c2ff;
+            --color-seccion-boton: #19c2ff;
+            --color-seccion-carrusel2: #fcfcfc;
+            --color-seccion-texto: #19c2ff;
+            --bg-ubicacion: #000000;
+}
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--color-fondo-general);
+            color: #333;
+        }
+
+        .section {
+            width: 100%;
+            padding: 5px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section {
+            width: 100%;
+            padding: 15px 0;
+            display: flex;          /* Activa el modo flexible */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center;    /* Centra verticalmente */
+        }
+
+        /* Estilos de cada sección */
+        #logo-header { background-color: var(--color-seccion-logo); }
+        #carrusel-principal { background-color: var(--color-seccion-carrusel1); }
+        #redes-sociales { background-color: var(--color-seccion-redes); }
+        #contacto-directo { background-color: var(--color-seccion-boton); }
+        #carrusel-mixto { background-color: var(--color-seccion-carrusel2); }
+        #info-final { background-color: var(--color-seccion-texto); }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+        }
+
+        img, video {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Carruseles con scroll horizontal */
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            border-radius: 15px;
+        }
+
+        /* Iconos de Redes */
+        .social-icons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .social-icons a img {
+            width: 45px;
+            transition: transform 0.2s;
+        }
+
+        /* Botón de Contacto */
+        .btn-save {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-map {
+            display: inline-block;
+            background-color: var(--accent-mapa);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .text-content {
+            padding: 15px;
+            line-height: 1.6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="logo-header" class="section">
+        <div class="container" style="text-align: center;">
+            <img src="imagenes/logo.jpg" alt="Ortonova Logo" style="width: 250px;">
+        </div>
+    </section>
+
+    <section id="carrusel-principal" class="section">
+        <div class="container">
+            <div class="carousel-container">
+                <img src="imagenes/1.jpg" class="carousel-item">
+                <img src="imagenes/2.jpg" class="carousel-item">
+                <img src="imagenes/3.jpg" class="carousel-item">
+                <img src="imagenes/4.jpg" class="carousel-item">
+            </div>
+        </div>
+    </section>
+
+    <section id="redes-sociales" class="section">
+        <div class="container social-icons">
+            <a href="https://instagram.com/bracketscd.delicias" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com/share/1CpcgQrKBL/?mibextid=wwXlfr" target="_blank"><img src="imagenes/facebook.png" alt="Facebook"></a>
+            <a href="https://wa.me/526391419467" target="_blank"><img src="imagenes/whatsApp.png" alt="WhatsApp"></a>
+        </div>
+    </section>
+
+    <section id="sec-mapa" class="section" style="background-color: var(--bg-ubicacion);">
+        <div class="container" style="display: flex; justify-content: center;">
+            <a href="https://maps.app.goo.gl/kzF5tLt7kC76TKRJA" target="_blank" class="btn-map">
+                📍 VER UBICACIÓN
+            </a>
+        </div>
+    </section>
+
+    <section id="contacto-directo" class="section">
+        <a href="vcard.vcf" download class="btn-save">
+            GUARDAR CONTACTO
+        </a>
+    </section>
+
+    <section id="carrusel-mixto" class="section">
+        <div class="container">
+            <div class="carousel-container">
+                <video class="carousel-item" autoplay muted loop playsinline>
+                    <source src="imagenes/vid.mp4" type="video/mp4">
+                </video>
+                <img src="imagenes/6.jpg" class="carousel-item">
+                <img src="imagenes/7.jpg" class="carousel-item">
+                <img src="imagenes/8.jpg" class="carousel-item">
+            </div>
+        </div>
+    </section>
+
+    <section id="info-final" class="section">
+        <div class="container text-content">
+            <p>©VIBB</p>
+        </div>
+    </section>
+
+</body>
+</html>
